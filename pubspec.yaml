@@ -1,0 +1,56 @@
+name: fmb_shopping_tracker
+description: Feed MB shopping tracker
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: "^3.2.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.0
+
+  # Drift
+  drift: ^2.15.0
+  path_provider: ^2.1.2
+  http: ^1.2.0
+  sqlite3: ^2.3.0
+  sqlite3_flutter_libs: ^0.5.19+1
+
+  # Riverpod
+  provider: ^6.0.3
+  flutter_riverpod: ^2.3.1
+  riverpod_annotation: ^2.0.1
+  collection: ^1.17.0
+  equatable: ^2.0.5
+  intl: ^0.19.0
+  hooks_riverpod: ^2.3.2
+  flutter_hooks: ^0.20.4
+  path: ^1.8.3
+  go_router: ^13.1.0
+  dcm: ^1.6.2
+  flutter_modular: ^6.0.4+1
+  firebase_core: ^2.25.2
+  validatorless: ^1.2.3
+  cloud_firestore: ^4.15.2
+  firebase_auth: ^4.17.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  build_runner: ^2.4.8
+  json_serializable: ^6.2.0
+  riverpod_generator: ^2.1.3
+  drift_dev: ^2.15.0
+
+flutter:
+  uses-material-design: true
+
+scripts:
+  test: flutter test lib
+  build: flutter pub run build_runner build --delete-conflicting-outputs
+  watch: flutter pub run build_runner watch

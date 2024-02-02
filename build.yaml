@@ -1,0 +1,19 @@
+targets:
+  $default:
+    builders:
+      json_serializable:
+        options:
+          create_to_json: true
+          include_if_null: false
+      drift_dev:
+        options:
+          sql:
+            dialect: sqlite
+            options:
+              version:
+              modules:
+                - json1
+                - fts5
+          apply_converters_on_variables: true
+          generate_values_in_copy_with: true
+          scoped_dart_components: true
