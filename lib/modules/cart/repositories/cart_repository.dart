@@ -11,7 +11,6 @@ class CartRepository {
   }
 
   Future<List<CartItem>> getCartItems() async {
-    // Directly return the result of the query if it's already a list of CartItem objects
     return _database.select(_database.cartItems).get();
   }
 

@@ -1,58 +1,53 @@
 import 'package:flutter/material.dart';
-import '/shared/components/custom_drawer.dart'; // Ensure the path is correct
+import 'package:flutter_modular/flutter_modular.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen();
 
   @override
-  State<HomeScreen> createState() => _HomePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomeScreen> {
-  final TextEditingController _searchController = TextEditingController();
+  String _selectedMenuItem = 'cart';
 
-  @override
-  void dispose() {
-    // Dispose controllers and any resources used by this widget.
-    _searchController.dispose();
-    super.dispose();
-  }
-
-  void _onSearchSubmitted(String value) {
-    // Implement your search logic here.
-    // For now, just print the search value to the console.
-    print("Search submitted: $value");
+  void _selectMenuItem(String menuItem) {
+    setState(() {
+      _selectedMenuItem = menuItem;
+    });
+    // Close the drawer
+    Navigator.of(context).pop();
+    // Navigate to the selected page
+    Modular.to.navigate('/home/$_selectedMenuItem');
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-        leading: IconButton(
-          icon: const Icon(Icons.menu),
-          onPressed: () => Scaffold.of(context).openDrawer(),
-        ),
-      ),
-      drawer: CustomDrawer(),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                controller: _searchController,
-                decoration: const InputDecoration(
-                  labelText: 'Search for items',
-                  suffixIcon: Icon(Icons.search),
-                ),
-                onSubmitted: _onSearchSubmitted,
-              ),
+      appBar: AppBar(title: Text('Home')),
+      drawer: Drawer(
+        child: ListView(
+          children: <Widget>[
+            ListTile(
+              title: Text('Home'),
+              selected: _selectedMenuItem == 'home',
+              onTap: () => _selectMenuItem('home'),
             ),
-            // Add more widgets as needed
+            ListTile(
+              title: Text('Profile'),
+              selected: _selectedMenuItem == 'profile',
+              onTap: () => _selectMenuItem('profile'),
+            ),
+            ListTile(
+              title: Text('Cart'),
+              selected: _selectedMenuItem == 'cart',
+              onTap: () => _selectMenuItem('cart'),
+            ),
           ],
         ),
       ),
+      // The main content area where selected page will be displayed
+      body: RouterOutlet(),
     );
   }
 }

@@ -9,6 +9,7 @@ class HomeModule extends Module {
 
   @override
   void routes(RouteManager r) {
-    r.child('/', child: (context) => HomeScreen());
+    r.child('/home/', child: (context) => HomeScreen());
+    // Add other routes as needed.
   }
 }

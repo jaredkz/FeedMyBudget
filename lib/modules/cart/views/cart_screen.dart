@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import '../../../database/app_database.dart'; // Ensure this import is correct if needed
+import '../../../database/app_database.dart';
 import '../controllers/cart_controller.dart';
-import '../widgets/cart_item_widget.dart'; // Ensure this path is correct
+import '../widgets/cart_item_widget.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class _CartScreenState extends State<CartScreen> {
   void initState() {
     super.initState();
     _cartController = Modular.get<CartController>();
-    _cartController.getCartItems(); // Ensure cart items are initialized
+    _cartController.getCartItems();
   }
 
   @override
@@ -37,16 +37,15 @@ class _CartScreenState extends State<CartScreen> {
             return Center(child: Text('Error: ${snapshot.error.toString()}'));
           } else if (snapshot.hasData && snapshot.data!.isEmpty) {
             return const Center(child: Text('Your cart is empty.'));
-          } else {
-            final cartItems = snapshot.data ?? [];
-            return ListView.builder(
-              itemCount: cartItems.length,
-              itemBuilder: (_, index) {
-                final cartItem = cartItems[index];
-                return CartItemWidget(cartItem: cartItem);
-              },
-            );
           }
+          final cartItems = snapshot.data ?? [];
+          return ListView.builder(
+            itemCount: cartItems.length,
+            itemBuilder: (_, index) {
+              final cartItem = cartItems[index];
+              return CartItemWidget(cartItem: cartItem);
+            },
+          );
         },
       ),
     );

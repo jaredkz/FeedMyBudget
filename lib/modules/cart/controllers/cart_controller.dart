@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter_modular/flutter_modular.dart';
-import '../../../database/app_database.dart'; // Adjust the import as necessary
+import '/database/app_database.dart';
 import '../repositories/cart_repository.dart';
 
 class CartController extends Disposable {
@@ -13,7 +13,6 @@ class CartController extends Disposable {
 
   Stream<List<CartItem>> get cartItemsStream => _cartItemsController.stream;
 
-  // Renamed from _initializeCartItems to getCartItems for clarity
   Future<void> getCartItems() async {
     try {
       final items = await _repository.getCartItems();
@@ -25,22 +24,22 @@ class CartController extends Disposable {
 
   Future<void> addItem(CartItem item) async {
     await _repository.addItem(item.toCompanion(true));
-    await getCartItems(); // Refresh cart items
+    await getCartItems();
   }
 
   Future<void> removeItem(int itemId) async {
     await _repository.removeItem(itemId);
-    await getCartItems(); // Refresh cart items
+    await getCartItems();
   }
 
   Future<void> updateItem(CartItem updatedItem) async {
     await _repository.updateItem(updatedItem.toCompanion(true));
-    await getCartItems(); // Refresh cart items
+    await getCartItems();
   }
 
   Future<void> clearCart() async {
     await _repository.clearCart();
-    await getCartItems(); // Refresh cart items
+    await getCartItems();
   }
 
   @override

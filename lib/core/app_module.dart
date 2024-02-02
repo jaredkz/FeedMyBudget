@@ -1,10 +1,11 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import '../modules/auth/auth_module.dart';
-import '../modules/home/home_module.dart';
+import '/modules/cart/cart_module.dart';
+import '/modules/cart/repositories/cart_repository.dart';
+import '/modules/home/home_module.dart';
+import '/modules/home/views/home_screen.dart';
+import '../modules/cart/controllers/cart_controller.dart';
 import '../modules/profile/profile_module.dart';
 import '../database/app_database.dart';
-import '../modules/profile/profile_controller.dart';
-// import '../modules/auth/domain/auth_controller.dart';
 
 class AppModule extends Module {
   final AppDatabase appDatabase;
@@ -18,15 +19,18 @@ class AppModule extends Module {
     // Provide the AppDatabase instance
     i.addSingleton<AppDatabase>(() => appDatabase);
 
-    i.addLazySingleton<ProfileController>(() => ProfileController());
+    i.addLazySingleton<CartRepository>(() => CartRepository(i()));
+    i.addLazySingleton<CartController>(() => CartController(i()));
+
 // i.add<AuthController>(AuthController.new);
   }
 
   @override
-  void routes(RouteManager r) {
-    r.module('/', module: HomeModule());
-    r.module('/auth', module: AuthModule());
-    r.module('/profile', module: ProfileModule());
-    // Ensure your routes are correctly set up for your modules
+  void routes(r) {
+    r.module('/home/', module: HomeModule());
+    r.child('/', child: (context) => HomeScreen(), children: [
+      ModuleRoute('/home/cart/', module: CartModule()),
+      ModuleRoute('/home/profile/', module: ProfileModule()),
+    ]);
   }
 }

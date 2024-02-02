@@ -1,6 +1,6 @@
 import 'package:drift/drift.dart';
-import 'database.dart'; // Import your conditional database logic
-import 'tables/cart_items.dart'; // Import your table definitions
+import 'database.dart';
+import 'tables/cart_items.dart';
 
 part 'app_database.g.dart';
 
