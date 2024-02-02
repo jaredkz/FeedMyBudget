@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'view/home_screen.dart';
+import 'views/home_screen.dart';
 
 class HomeModule extends Module {
   @override
@@ -9,6 +9,6 @@ class HomeModule extends Module {
 
   @override
   void routes(RouteManager r) {
-    r.child('/', child: (context) => HomePage());
+    r.child('/', child: (context) => HomeScreen());
   }
 }

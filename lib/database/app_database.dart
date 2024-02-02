@@ -13,7 +13,7 @@ class AppDatabase extends _$AppDatabase {
 
   // Static method to asynchronously create an instance of AppDatabase
   static Future<AppDatabase> create() async {
-    final executor = await getDatabaseExecutor(); // Ensure this is async
+    final executor = await getDatabaseExecutor();
     return AppDatabase(executor);
   }
 }
