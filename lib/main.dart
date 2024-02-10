@@ -11,7 +11,7 @@ void main() async {
     // Async database initialization
     final AppDatabase database = await AppDatabase.create();
     // Set the initial route for Modular to use
-    Modular.setInitialRoute('/');
+    Modular.setInitialRoute('/home/');
 
     runApp(ModularApp(module: AppModule(database), child: const AppWidget()));
   } catch (error) {

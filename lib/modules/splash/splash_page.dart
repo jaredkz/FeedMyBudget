@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../shared/components/custom_drawer.dart';
-
-class ProfilePage extends StatelessWidget {
-  const ProfilePage();
+class SplashPage extends StatelessWidget {
+  const SplashPage();
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +12,7 @@ class ProfilePage extends StatelessWidget {
     final String userImageUrl = "https://via.placeholder.com/150";
 
     return Scaffold(
-      appBar: AppBar(title: Text('Profile')),
-      drawer: CustomDrawer(),
+      appBar: AppBar(title: Text('Splash Screen')),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
