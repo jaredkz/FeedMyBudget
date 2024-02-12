@@ -13,10 +13,10 @@ packages:
     dependency: transitive
     description:
       name: _flutterfire_internals
-      sha256: "733f8cd2c6f3e7beb7857b8c9767504ea9701a7a481147e2730cfcd50b2dc7e8"
+      sha256: "1a52f1afae8ab7ac4741425114713bdbba802f1ce1e0648e167ffcc6e05e96cf"
       url: "https://pub.dev"
     source: hosted
-    version: "1.3.19"
+    version: "1.3.21"
   analyzer:
     dependency: transitive
     description:
@@ -181,26 +181,26 @@ packages:
     dependency: "direct main"
     description:
       name: cloud_firestore
-      sha256: ace3c39ab716922420cd70399cbefe4bfdbd8ca8ac606bd735ca0b6d49770efc
+      sha256: b62be7f11ba72fd6112d8921336d670023a6784898e5cf4d21754cc114d8b56c
       url: "https://pub.dev"
     source: hosted
-    version: "4.15.2"
+    version: "4.15.4"
   cloud_firestore_platform_interface:
     dependency: transitive
     description:
       name: cloud_firestore_platform_interface
-      sha256: "51270190f1bd5673f81f69375fd6de237935f503779f4c71b557ebe9446823a9"
+      sha256: "53f34ec3b6e90537786bfeabc5be1798e03518b5ffbf8acef4d64523f517b010"
       url: "https://pub.dev"
     source: hosted
-    version: "6.1.3"
+    version: "6.1.5"
   cloud_firestore_web:
     dependency: transitive
     description:
       name: cloud_firestore_web
-      sha256: b5e5a5967f513ee1ec4386ecb80a467b5ffc93d4278ed7e597743ad504650c9a
+      sha256: "85367362561333e40d48ce60351b0d9e58f457fad8d06e36ae5d94f1b9b29518"
       url: "https://pub.dev"
     source: hosted
-    version: "3.10.2"
+    version: "3.10.4"
   code_builder:
     dependency: transitive
     description:
@@ -245,18 +245,18 @@ packages:
     dependency: transitive
     description:
       name: custom_lint
-      sha256: "22bd87a362f433ba6aae127a7bac2838645270737f3721b180916d7c5946cb5d"
+      sha256: f89ff83efdba7c8996e86bb3bad0b759d58f9b19ae4d0e277a386ddd8b481217
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.11"
+    version: "0.6.0"
   custom_lint_core:
     dependency: transitive
     description:
       name: custom_lint_core
-      sha256: "77dd37e9afe5ed86fc75de22ed3dfae5afb75303111358766550af23e7de53cd"
+      sha256: "9003a91409c9f1db6e2e50b4870d1d5e802e5923b25f7261bf3cb3e11ea9d4fb"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.11"
+    version: "0.6.0"
   dart_style:
     dependency: transitive
     description:
@@ -333,34 +333,34 @@ packages:
     dependency: "direct main"
     description:
       name: firebase_auth
-      sha256: "469f3a66d8ffdd1e29d671a55cd67d0cd69cf08fdf67a32b815a122c6b9b669a"
+      sha256: "549f8ceb8cfc1920f85dea0ab73fb7dc209ee8182916b252eda342786c33369d"
       url: "https://pub.dev"
     source: hosted
-    version: "4.17.2"
+    version: "4.17.4"
   firebase_auth_platform_interface:
     dependency: transitive
     description:
       name: firebase_auth_platform_interface
-      sha256: "44ec47b05fea007c9670cf8af57011360a039aff5ecb078d247fea46eb180fb9"
+      sha256: "83bfc14649f673db17ad0bffaa0222019f99f3ddf499bcc8b46e1eb3443d3e08"
       url: "https://pub.dev"
     source: hosted
-    version: "7.1.2"
+    version: "7.1.4"
   firebase_auth_web:
     dependency: transitive
     description:
       name: firebase_auth_web
-      sha256: da3b8ea3f1a59de27de3bb11e7ad71cca04f8cc3ba7729efb4d3e1173d9bc7e3
+      sha256: d2266452698dd5f6e522408dacfa06bb7f9703b5bdd11498fce2812ded50805b
       url: "https://pub.dev"
     source: hosted
-    version: "5.9.2"
+    version: "5.9.4"
   firebase_core:
     dependency: "direct main"
     description:
       name: firebase_core
-      sha256: "4761e56863ddf21341fd88e7f6325720d6537d8b9af4288f2c36968d54aa6d04"
+      sha256: "7e049e32a9d347616edb39542cf92cd53fdb4a99fb6af0a0bff327c14cd76445"
       url: "https://pub.dev"
     source: hosted
-    version: "2.25.2"
+    version: "2.25.4"
   firebase_core_platform_interface:
     dependency: transitive
     description:
@@ -373,10 +373,10 @@ packages:
     dependency: transitive
     description:
       name: firebase_core_web
-      sha256: "288bcb940f21b21cfa575c998f3145a33ded9628a01cf9797057cc56888f4900"
+      sha256: "57e61d6010e253b36d38191cefd6199d7849152cdcd234b61ca290cdb278a0ba"
       url: "https://pub.dev"
     source: hosted
-    version: "2.11.2"
+    version: "2.11.4"
   fixnum:
     dependency: transitive
     description:
@@ -394,10 +394,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_hooks
-      sha256: "09f64db63fee3b2ab8b9038a1346be7d8986977fae3fec601275bf32455ccfc0"
+      sha256: cde36b12f7188c85286fba9b38cc5a902e7279f36dd676967106c041dc9dde70
       url: "https://pub.dev"
     source: hosted
-    version: "0.20.4"
+    version: "0.20.5"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -414,14 +414,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.3.2"
-  flutter_riverpod:
-    dependency: "direct main"
-    description:
-      name: flutter_riverpod
-      sha256: da9591d1f8d5881628ccd5c25c40e74fc3eef50ba45e40c3905a06e1712412d5
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.4.9"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -460,10 +452,10 @@ packages:
     dependency: "direct main"
     description:
       name: go_router
-      sha256: "07ee2436909f749d606f53521dc1725dd738dc5196e5ff815bc254253c594075"
+      sha256: "170c46e237d6eb0e6e9f0e8b3f56101e14fb64f787016e42edd74c39cf8b176a"
       url: "https://pub.dev"
     source: hosted
-    version: "13.1.0"
+    version: "13.2.0"
   graphs:
     dependency: transitive
     description:
@@ -472,14 +464,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.1"
-  hooks_riverpod:
-    dependency: "direct main"
-    description:
-      name: hooks_riverpod
-      sha256: c12a456e03ef9be65b0be66963596650ad7a3220e96c7e7b0a048562ea32d6ae
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.4.9"
   http:
     dependency: "direct main"
     description:
@@ -756,34 +740,34 @@ packages:
     dependency: transitive
     description:
       name: riverpod
-      sha256: "942999ee48b899f8a46a860f1e13cee36f2f77609eb54c5b7a669bb20d550b11"
+      sha256: "548e2192eb7aeb826eb89387f814edb76594f3363e2c0bb99dd733d795ba3589"
       url: "https://pub.dev"
     source: hosted
-    version: "2.4.9"
+    version: "2.5.0"
   riverpod_analyzer_utils:
     dependency: transitive
     description:
       name: riverpod_analyzer_utils
-      sha256: d4dabc35358413bf4611fcb6abb46308a67c4ef4cd5e69fd3367b11925c59f57
+      sha256: "8b71f03fc47ae27d13769496a1746332df4cec43918aeba9aff1e232783a780f"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0"
+    version: "0.5.1"
   riverpod_annotation:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: riverpod_annotation
-      sha256: b70e95fbd5ca7ce42f5148092022971bb2e9843b6ab71e97d479e8ab52e98979
+      sha256: "77e5d51afa4fa3e67903fb8746f33d368728d7051a0b6c292bcee60aeba46d95"
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.3"
+    version: "2.3.4"
   riverpod_generator:
     dependency: "direct dev"
     description:
       name: riverpod_generator
-      sha256: ff8f064f1d7ef3cc6af481bba8e9a3fcdb4d34df34fac1b39bbc003167065be0
+      sha256: "359068f04879347ae4edbe66c81cc95f83fa1743806d1a0c86e55dd3c33ebb32"
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.9"
+    version: "2.3.11"
   rxdart:
     dependency: transitive
     description:
@@ -1015,4 +999,4 @@ packages:
     version: "3.1.2"
 sdks:
   dart: ">=3.2.0 <4.0.0"
-  flutter: ">=3.10.0"
+  flutter: ">=3.13.0"

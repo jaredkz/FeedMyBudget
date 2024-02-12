@@ -111,7 +111,6 @@ dart_code_metrics:
     - avoid-unnecessary-super
 
     # Style
-    - prefer-trailing-comma
     - unnecessary-trailing-comma
     - prefer-declaring-const-constructor
     - prefer-single-widget-per-file
