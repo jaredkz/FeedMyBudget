@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../shared/components/custom_drawer.dart'; // Ensure this path is correct for your project structure
+import '../../shared/components/custom_drawer.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage();
@@ -19,9 +19,9 @@ class CartPage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Card(
                     child: ListTile(
-                      leading: Icon(Icons.shopping_cart), // Placeholder icon
-                      title: Text('Item ${index + 1}'), // Placeholder item name
-                      subtitle: Text('Quantity: 1'), // Placeholder quantity
+                      leading: Icon(Icons.shopping_cart),
+                      title: Text('Item ${index + 1}'),
+                      subtitle: Text('Quantity: 1'),
                       trailing: IconButton(
                         icon: Icon(Icons.remove_circle_outline),
                         onPressed: () {

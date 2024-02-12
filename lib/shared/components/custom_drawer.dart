@@ -8,18 +8,16 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        // Using ListView to accommodate for varying content lengths and ensure it's scrollable
         children: <Widget>[
           UserAccountsDrawerHeader(
-            // This is the place for user information - adjust as needed
             accountName: Text(
               "User Name",
-            ), // You might want to fetch this from your user model
-            accountEmail: Text("user@example.com"), // Same as above
+            ),
+            accountEmail: Text("user@example.com"),
             currentAccountPicture: CircleAvatar(
               backgroundColor: Colors.white,
               child: Text(
-                "UN", // User initials - consider fetching from user model
+                "UN",
                 style: TextStyle(fontSize: 24.0),
               ),
             ),
@@ -48,7 +46,14 @@ class CustomDrawer extends StatelessWidget {
               Modular.to.navigate('/profile/');
             },
           ),
-          // Add more ListTile widgets for other navigation items
+          ListTile(
+            leading: Icon(Icons.question_mark),
+            title: Text('Products'),
+            onTap: () {
+              Navigator.of(context).pop();
+              Modular.to.navigate('/products/');
+            },
+          ),
         ],
       ),
     );
