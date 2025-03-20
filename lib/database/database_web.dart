@@ -5,7 +5,7 @@ Future<DatabaseConnection> connectOnWeb() async {
   final result = await WasmDatabase.open(
     databaseName: 'fmb_database',
     sqlite3Uri: Uri.parse('sqlite3.wasm'),
-    driftWorkerUri: Uri.parse('drift_worker.dart.js'),
+    driftWorkerUri: Uri.parse('drift_worker.dart.js')
   );
 
   if (result.missingFeatures.isNotEmpty) {

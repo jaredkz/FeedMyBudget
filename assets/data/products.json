@@ -106,5 +106,5 @@
         "price": 6,
         "pricedata": "{\"CupPrice\": 5.0, \"CupMeasure\": \"100G\", \"CupString\": \"$5.00 / 100G\", \"WasPrice\": 6.0, \"eakg\": 0}",
         "subcat": "Packaged Bread"
-    },
+    }
 ]

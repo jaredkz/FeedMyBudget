@@ -46,7 +46,7 @@ class AppDatabase extends _$AppDatabase {
   Future<void> _populateInitialData() async {
     final productCount = await select(products).get().then((p) => p.length);
     if (productCount == 0) {
-      final data = await rootBundle.loadString('assets/data/products.json');
+      final data = await rootBundle.loadString('data/products.json');
       final List<dynamic> productList = json.decode(data);
 
       await batch((batch) {

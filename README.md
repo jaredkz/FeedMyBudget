@@ -1,26 +1,16 @@
-## DEVELOPMENT RELEASE
+# spudcook
 
-I'll populate this properly later, but I want to create a way to use a database online and offline, online-only for web. To do this, all operations seem to require async for web support with Drift, so that is implemented.
+A new Flutter project.
 
-### Version 0.5.1
-- Added Products Module, included in navigation
-- Implemented prepopulated database for products module along with full support for web.
-- Added a bunch of additional tables for implementation
-- Pubspec version bump
-  Current modules: Products, placeholders: Profile, Cart, Home.
+## Getting Started
 
-### Version 0.4
-- Temporarily removed databases to adjust navigation before the 0.5 dev releas.
-- Navigation is now fixed, assuming pages should not error out as we only have closed navigation currently.
-- Navigation now separates all modules and loads them individually so child navigation can be used within these modules.
+This project is a starting point for a Flutter application.
 
+A few resources to get you started if this is your first Flutter project:
 
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-### Version 0.3
-- Using Drift for databases
-- Using Flutter Modular for dependency injection and state management.
-- Modules/pages added: Cart; placeholders: profile;
-
-## Changes
-
-There will likely be plenty of changes that will not be covered in detail by the changelog as this project is going to be in active development.
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

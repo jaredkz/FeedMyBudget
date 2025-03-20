@@ -1,11 +1,11 @@
 {
-    "name": "feedmybudget",
-    "short_name": "feedmybudget",
+    "name": "spudcook",
+    "short_name": "spudcook",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Shopping list with extras.",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
